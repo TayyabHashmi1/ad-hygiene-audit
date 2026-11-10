@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>AD hygiene report</title><style>body{font-family:Segoe UI,system-ui,sans-serif;margin:32px;color:#14202b;background:#f6f8fa}
+h1{margin:0 0 4px}p.sub{color:#5a6b7b;margin:0 0 24px}
+.cards{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+.card{background:#fff;border:1px solid #d8e0e8;border-radius:10px;padding:14px 18px;min-width:140px}
+.card b{display:block;font-size:28px}
+table{border-collapse:collapse;width:100%;background:#fff;border:1px solid #d8e0e8}
+th,td{padding:9px 12px;border-bottom:1px solid #e6ecf1;text-align:left;font-size:14px;vertical-align:top}
+th{background:#eef2f6}
+.pill{display:inline-block;min-width:64px;text-align:center;border-radius:999px;padding:2px 10px;font-weight:600;color:#fff}
+.high{background:#c0392b}.medium{background:#b8740a}.low{background:#4a6a8a}
+.note{color:#5a6b7b;font-size:13px;margin-top:16px}</style></head><body>
+<h1>AD hygiene report</h1>
+<p class="sub">Generated 2026-11-09 23:16 from fictional demo data. 13 findings.</p>
+<div class="cards"><div class="card"><b>3</b>High</div><div class="card"><b>6</b>Medium</div><div class="card"><b>4</b>Low</div></div>
+<table><thead><tr><th>Severity</th><th>Area</th><th>Object</th><th>Finding</th><th>Suggested action</th></tr></thead><tbody>
+<tr><td><span class="pill high">High</span></td><td>Users</td><td>adm-lopez</td><td>No logon for 151 days</td><td>Disable the account if it is no longer used.</td></tr>
+<tr><td><span class="pill high">High</span></td><td>Users</td><td>old-contractor</td><td>Disabled account is still a member of a privileged group</td><td>Remove it from the privileged group.</td></tr>
+<tr><td><span class="pill high">High</span></td><td>Users</td><td>svc-backup</td><td>Password never expires</td><td>Use a managed service account or add a rotation process.</td></tr>
+<tr><td><span class="pill medium">Medium</span></td><td>Computers</td><td>SRV-OLDAPP</td><td>Operating system out of support: Windows Server 2012 R2 Standard</td><td>Upgrade or replace the system.</td></tr>
+<tr><td><span class="pill medium">Medium</span></td><td>Computers</td><td>WS-RETIRED7</td><td>Operating system out of support: Windows 7 Professional</td><td>Upgrade or replace the system.</td></tr>
+<tr><td><span class="pill medium">Medium</span></td><td>Entra guests</td><td>auditor_firm.example#EXT#</td><td>Guest invitation pending for 121 days</td><td>Cancel the invitation or resend it if the access is still needed.</td></tr>
+<tr><td><span class="pill medium">Medium</span></td><td>Groups</td><td>Domain Admins</td><td>Privileged group has 14 members</td><td>Review membership and remove anyone who does not need it.</td></tr>
+<tr><td><span class="pill medium">Medium</span></td><td>Users</td><td>j.martin</td><td>No logon for 211 days</td><td>Disable the account if it is no longer used.</td></tr>
+<tr><td><span class="pill medium">Medium</span></td><td>Users</td><td>new.hire</td><td>Enabled account has never logged on</td><td>Confirm it is needed, then disable it.</td></tr>
+<tr><td><span class="pill low">Low</span></td><td>Computers</td><td>WS-RETIRED7</td><td>No logon for 301 days</td><td>Disable and move the account if the machine is retired.</td></tr>
+<tr><td><span class="pill low">Low</span></td><td>Groups</td><td>Printers-Old</td><td>Group has no members</td><td>Delete the group if it is unused.</td></tr>
+<tr><td><span class="pill low">Low</span></td><td>Groups</td><td>Project-Falcon</td><td>Group has no members</td><td>Delete the group if it is unused.</td></tr>
+<tr><td><span class="pill low">Low</span></td><td>Users</td><td>j.martin</td><td>Password is 501 days old</td><td>Require a password change.</td></tr>
+</tbody></table>
+<p class="note">Read-only audit. Last logon dates come from lastLogonTimestamp, which can lag by up to 14 days. Review each finding before changing anything.</p>
+</body></html>
